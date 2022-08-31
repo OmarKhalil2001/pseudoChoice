@@ -1,0 +1,277 @@
+<!doctype HTML>
+<HTML>
+	<HEAD>
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		
+		<TITLE>pseudoChoice</TITLE>
+
+		<link rel="icon" type="image/png" href="image/fvicon.png">
+		
+		<style>
+		
+
+			body{ 	margin:0px;
+				height : 100%; 
+				min-width: 280px;
+				color : cornsilk;
+			}			
+	
+			HTML{ 
+				width : 100%;
+				min-height : 100%;
+				margin : 0px;			
+				padding: 0.1px;
+				background : url('image/background.jpeg'); 
+				background-position : center; 
+				background-repeat : no-repeat;
+				background-size: cover;
+				background-attachment: fixed; 
+	}
+			
+			#main {
+				width: 45%; 
+				background: rgba(0,0,0,0.7); 
+				border-radius: 7px; 
+				border-color: white; 
+				margin : 20px; 
+				padding:10px  
+	                     }
+
+			#section2{ display: none;}
+
+			#title {
+				margin:3px;
+				}
+
+			hr.H-line{
+				border-color: black; 
+				color: black;
+				}
+
+			div.color-div{
+					padding : 5px;
+					background : rgba(0,255,255,0.4); 
+					border-radius : 7px;
+				}
+
+			#catchphrase {
+					font-size : 18px; 
+					margin : 0px;
+				}
+
+			input{ 
+				text-indent: 7px; 
+				margin : 2.5px;
+				border-color : black;
+				width : 70%; 
+				border-radius : 10px;  
+				background : rgba(255,255,255,0.8);
+	 		}
+
+			#Add{
+				width:60px; 
+				background-color: rgba(30,30,30); 
+				padding : 5px; 
+				margin : 2.5px;
+				border-radius: 3px; 
+				border : 1px;					
+				border-color: black;
+				font-size: 75%;
+				color: white;
+			}
+			
+			#continue{
+				width:50%; 
+				align: center;
+				background-color:rgba(30,30,30);  
+				padding : 5px; 
+				margin : 2.5px;
+				border-radius: 3px; 
+				border : 1px;					
+				border-color: black;
+				font-size: 75%;
+				color: white;
+				
+
+			}
+
+			#Remove{
+				width:60px; 
+				margin : 2.5px;					
+				background-color: #aa0000; 
+				padding : 5px; 
+				border-radius: 3px; 
+				border : 1px;					
+				border-color: black;
+				font-size: 75%;
+				color: white;
+			}
+
+			#back{
+				width:80px; 
+				margin : 2.5px;					
+				background-color: #aa0000; 
+				padding : 5px; 
+				border-radius: 3px; 
+				border : 1px;					
+				border-color: black;
+				font-size: 75%;
+				color: white;
+			}
+
+			#submit{
+				width:130px; 
+				margin : 2.5px;
+				background-color: rgba(30,30,30);  
+				padding : 5px; 
+				border-radius: 3px; 
+				border : 1px;					
+				border-color: black;
+				font-size: 75%;
+				color: white;
+
+			}
+
+			#choice{
+				display: none; 
+				width : 100%;
+				}
+
+			#picked{ word-break: break-all; }
+
+			#pick{		
+				width:80px; 
+				background-color: rgba(30,30,30); 
+				padding : 5px; 
+				border-radius: 3px; 
+				border-color: black;
+				border : 1px;
+				font-size: 75%;
+				color: white; 
+				
+			}
+
+			#privacy { display:none; }
+			
+			#privacyButton{			
+					width:50%; 
+					align: center;
+					background-color:rgba(30,30,30);  
+					padding : 5px; 
+					margin : 2.5px;
+					border-radius: 3px; 
+					border : 1px;					
+					border-color: black;
+					font-size: 75%;
+					color: white;
+					}
+		</style>	
+	</HEAD>
+
+	
+	<BODY>		
+		<div id="bg">
+			<CENTER>
+				<!-- main part-->
+				<div id="main" >
+
+					<!--logo image-->
+						
+					<img src = "image/logo.png" width = " 45% " ></img>
+
+					<hr class="H-line">
+
+					<div id = "section1">
+						<div class="color-div" >
+							<h2 id = "title">An Online System to Draw Lots</h2>
+							<hr width = "65%" >
+							<p id = "catchphrase" ><b> pseudoChoice is the electronic solution to draw lots; it can pick from more than 1000 choices. You just enter 								your choices and it chooses for you in its pseudorandom way.  </b></p>
+							<hr width = "65%" >
+							<button id="continue"><b>Continue</b></button>	
+						</div>
+					<hr class="H-line">
+					</div>
+					
+				
+
+					<!-- asking for the values-->
+					<div id= "section2" align = "left">
+						<h2> Insert Choices: </h2>
+
+						<div class="color-div">
+													
+							<!--the unoredered list that holds the inputs-->
+							<ul id = "unordered-list">
+
+								<li><input type="text" ></input></li>						
+								<li><input type="text" ></input></li>					      
+						  		<li><input type="text" ></input></li>
+
+							</ul>
+				
+							<CENTER>
+								<!--"Add" button-->
+								<button id ="Add"><b>Add</b></button>
+								<!--"Remove" button-->
+								<button id ="Remove"><b>Remove</b></button>
+									</br>	
+								<!-- submit the values-->
+								<button id ="submit"><b>Submit</b></button>
+				
+								<!--a message that appears after the button is clicked to show success or failuer-->	
+								<b><p id="message"> </p></b>
+							</CENTER>
+						</div>
+						<hr class="H-line">
+					</div>
+
+					<CENTER>
+					
+
+						<div id = "choice">
+							<h2 align="left">The Choice: </h2>	
+							<div class="color-div">
+				
+								<!--disclaimer-->	
+								<p align ="left" >
+									<b>Please understand that this system works using the pseudorandomness 										concept and the outcomes aren't really random.</b>
+								</p> 			
+
+								<!-- the part in which the "pick" buttom and the choice appears in-->
+								<!--Picked choie appears here-->	
+								<p id= "picked"></p>
+
+								<button id ="pick"><b> Pick </b></button> 
+								<button id ="back"><b> Back </b></button>
+							</div>
+		
+							<hr class="H-line">	
+						</div>
+				
+								
+						<!--Privacy part-->
+						<div class="color-div">
+							<div id="privacy">
+						
+								<h3 align = "left"><b> Privacy: </b></h3>
+
+								<p align ="left"><b><i>On this website, none of your information is collected. 									However,some other websites, browsers, and companies can know what websites, 									including this website, did you visit, and some can understand your activity on 								other websites. Your privacy is your responsibility.</i></b></p> 			
+							</div>
+
+							<button id ="privacyButton"><b>Privacy Policy</b></button>
+						</div>
+					
+						<hr class="H-line">
+
+					</CENTER>
+
+				</div>
+			</CENTER>			
+			
+		</div>
+
+		<!-- calls the script needed for this page -->
+		<script src="scripts/resize.js"></script>
+		<script src = "scripts/choicepicker.js"></script>
+	</BODY>
+</HTML>
